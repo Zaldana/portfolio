@@ -4,6 +4,7 @@ import { Box } from '@mui/system'
 import { Typography, Stack } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Work from '../sections/Work'
+import bg from '../../images/bg.gif'
 
 function Home() {
   return (
@@ -26,7 +27,7 @@ function Home() {
                 <Box sx={{ border: "solid 5px red", height: "40vw", width: "50vw" }}>
                 </Box>
             </Stack>
-              <Box>
+              <Box sx={{width: "100%"}}>
                 <Work />
               </Box>
               <Box sx={{ color: "white", height: "100px" }}>

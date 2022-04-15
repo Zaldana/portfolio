@@ -28,9 +28,8 @@ function Work() {
             mt={10}
             sx={{
                 height: "50vh",
-                width: "90vw",
+                width: "100%",
                 border: "rgba(253, 239, 255, 1) 2px solid",
-                borderRadius: "10px",
                 display: "flex",
                 background: "white",
                 boxShadow: "0px 0px 10px 3px rgba(123, 89, 255, 0.86)",
@@ -45,12 +44,11 @@ function Work() {
             >
                 <Box style={style.card} >
                     <Box style={style.frame}>
-                        <img onClick={handleOpenOne} src={Image} style={{ height: "100%", width: "100%", objectFit: "cover" }} alt="image"/>
+                        <img onClick={handleOpenOne} src={Image} style={{ borderRadius: "10px", height: "100%", width: "100%", objectFit: "cover" }} alt="image"/>
                     </Box>
                     <Box sx={{ display: "flex" }}>
                         <img src={Mlogo} alt="milkman.com logo" style={{height: "20px", width: "20px"}} />
                         <Typography style={style.titles}><b>M</b>ilkman</Typography>
-                        
                     </Box>
                     <Modal
                         open={openOne}
@@ -70,7 +68,7 @@ function Work() {
                 </Box>
                 <Box style={style.card}>
                     <Box style={style.frame}>
-                        <img onClick={handleOpenTwo} src={Image} style={{ height: "100%", width: "100%", objectFit: "cover" }} alt="image" />
+                        <img onClick={handleOpenTwo} src={Image} style={{ borderRadius: "10px", height: "100%", width: "100%", objectFit: "cover" }} alt="image" />
                     </Box>
                     <Typography>Crate Digger</Typography>
                     <Modal
@@ -91,7 +89,7 @@ function Work() {
                 </Box>
                 <Box style={style.card}>
                     <Box style={style.frame}>
-                        <img onClick={handleOpenThree} src={Image} style={{ height: "100%", width: "100%", objectFit: "cover" }} alt="image" />
+                        <img onClick={handleOpenThree} src={Image} style={{ borderRadius: "10px", height: "100%", width: "100%", objectFit: "cover" }} alt="image" />
                     </Box>
                     <Typography>Beat Box</Typography>
                     <Modal
