@@ -1,6 +1,15 @@
 import React from 'react';
 import Image from '../../images/missing-image.png'
-import Mlogo from '../../images/mlogo.png'
+import Mui from '../../images/mui.png'
+import Redux from '../../images/redux.png'
+import ReactLogo from '../../images/react.png'
+import Mongo from '../../images/mongo.png'
+import Express from '../../images/express.png'
+import Node from '../../images/node.png'
+import Bootstrap from "../../images/bootstrap.png"
+import JQuery from "../../images/jquery.png"
+import HTML from "../../images/html.png"
+import CSS from "../../images/css.png"
 import {
     Typography,
     Box,
@@ -23,32 +32,46 @@ function Work() {
     const handleOpenThree = () => setOpenThree(true);
     const handleCloseThree = () => setOpenThree(false);
 
+
     return (
         <Box
-            mt={10}
             sx={{
-                height: "50vh",
-                width: "100%",
-                border: "rgba(253, 239, 255, 1) 2px solid",
+                border: "rgba(0, 0, 0, .1) 2px solid",
                 display: "flex",
-                background: "white",
+                background: "rgba(10, 10, 10, 0.5)",
                 boxShadow: "0px 0px 10px 3px rgba(123, 89, 255, 0.86)",
+                flexDirection: "column",
             }}
         >
+            <Box
+                pt={2}
+                sx={{ width: "100%", }}
+            >
+                <Typography sx={style.project}>Projects</Typography>
+            </Box>
             <Stack
                 direction={{ xs: 'column', sm: 'column', md: 'row' }}
-                alignItems={{ xs: "center", sm: "center", md: "flex-start" }}
-                justifyContent={{ xs: "center", sm: "center", md: "space-around" }}
-                sx={{ height: "85%", width: "100%" }}
-                p={5}
-            >
+                alignItems={{ xs: "center", sm: "center", md: "center" }}
+                justifyContent={{ xs: "center", sm: "center", md: "space-between"  }}
+                pl={{ xs: 0, sm: 0, md: 10 }}
+                pr={{ xs: 0, sm: 0, md: 10 }}
+            >    
                 <Box style={style.card} >
-                    <Box style={style.frame}>
-                        <img onClick={handleOpenOne} src={Image} style={{ borderRadius: "10px", height: "100%", width: "100%", objectFit: "cover" }} alt="image"/>
+                    <Box
+                        style={style.frame}>
+                        <img onClick={handleOpenOne} src={Image} style={style.image} alt="website preview"/>
                     </Box>
-                    <Box sx={{ display: "flex" }}>
-                        <img src={Mlogo} alt="milkman.com logo" style={{height: "20px", width: "20px"}} />
+                    <Box
+                        sx={style.titleBox}
+                        pt={3} pb={3}
+                    >
                         <Typography style={style.titles}><b>M</b>ilkman</Typography>
+                        <img src={Mongo} alt="mongo db logo" style={{ height: "30px", width: "28px" }} />
+                        <img src={Express} alt="express js logo" style={{ height: "25px", width: "25px", paddingRight: 5 }} />
+                        <img src={ReactLogo} alt="react logo" style={{ height: "30px", width: "30px" }} />
+                        <img src={Node} alt=" node js logo" style={{ height: "35px", width: "35px" }} />
+                        <img src={Redux} alt="redux logo" style={{ height: "20px", width: "20px" }} />
+                        <img src={Mui} alt="mui logo" style={{ height: "35px", width: "35px" }} />
                     </Box>
                     <Modal
                         open={openOne}
@@ -68,9 +91,19 @@ function Work() {
                 </Box>
                 <Box style={style.card}>
                     <Box style={style.frame}>
-                        <img onClick={handleOpenTwo} src={Image} style={{ borderRadius: "10px", height: "100%", width: "100%", objectFit: "cover" }} alt="image" />
+                        <img onClick={handleOpenTwo} src={Image} style={style.image} alt="image" />
                     </Box>
-                    <Typography>Crate Digger</Typography>
+                    <Box
+                        sx={style.titleBox}
+                        pt={3} pb={3}
+                    >
+                        <Typography ml={1} style={style.titles}><b>M</b>ilkman</Typography>
+                        <img src={Mongo} alt="mongodb logo" style={{ height: "30px", width: "28px" }} />
+                        <img src={Express} alt="expressjs logo" style={{ height: "25px", width: "25px", paddingRight: 5 }} />
+                        <img src={ReactLogo} alt="react logo" style={{ height: "30px", width: "30px" }} />
+                        <img src={Node} alt="node js logo" style={{ height: "35px", width: "35px" }} />
+                        <img src={Bootstrap} alt="bootstrap logo" style={{ height: "30px", width: "30px" }} />
+                    </Box>
                     <Modal
                         open={openTwo}
                         onClose={handleCloseTwo}
@@ -89,9 +122,17 @@ function Work() {
                 </Box>
                 <Box style={style.card}>
                     <Box style={style.frame}>
-                        <img onClick={handleOpenThree} src={Image} style={{ borderRadius: "10px", height: "100%", width: "100%", objectFit: "cover" }} alt="image" />
+                        <img onClick={handleOpenThree} src={Image} style={style.image} alt="image" />
                     </Box>
-                    <Typography>Beat Box</Typography>
+                    <Box
+                        sx={style.titleBox}
+                        pt={3} pb={3}
+                    >
+                        <Typography style={style.titles}><b>B</b>eat<b>B</b>ox</Typography>
+                        <img src={HTML} alt="html logo" style={{ height: "30px", width: "30px", padding: 3 }} />
+                        <img src={CSS} alt="css logo" style={{ height: "30px", width: "30px", padding: 3 }} />
+                        <img src={JQuery} alt="jquery logo" style={{ height: "30px", width: "30px", padding: 3 }} />
+                    </Box>
                     <Modal
                         open={openThree}
                         onClose={handleCloseThree}
@@ -117,15 +158,20 @@ export default Work
 
 const style = {
     card: {
-        width: "28%",
         height: "100%",
     },
     frame: {
-        width: "100%",
-        height: "70%",
+        minWidth: "25vw",
+        height: "20vh",
         border: "solid 1px blue",
-        boxShadow: "0px 0px 10px 3px rgba(123, 89, 255, 0.86)",
-        borderRadius: "10px"
+        boxShadow: "0px 0px 15px 3px rgba(123, 89, 255, 0.86)",
+        borderRadius: "10px",
+    },
+    image: {
+        borderRadius: "10px",
+        height: "100%",
+        width: "100%",
+        objectFit: "cover"
     },
     modal: {
         position: 'absolute',
@@ -138,11 +184,22 @@ const style = {
         boxShadow: 24,
         p: 4,
     },
+    titleBox: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+    },
     titles: {
         fontFamily: "Outfit",
-        marginTop: "10%",
-        fontSize: "2rem"
-
-        
+        fontSize: "24px",
+        color: "white",
+        marginRight: 20
+    },
+    project: {
+        textAlign: "right",
+        fontSize: "20vw",
+        textShadow: "2px 2px 10px 3px rgba(123, 89, 255)",
+        color: "white", 
+        fontFamily: "Bebas Neue",
     }
 }
