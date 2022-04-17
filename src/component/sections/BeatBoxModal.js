@@ -13,7 +13,7 @@ import { style } from './Work';
 
 export function BeatBoxModal(props) {
     return (<Box style={style.card}>
-        <Box style={style.frame}>
+        <Box style={style.frame} mr={{ xs: 0, sm: 0, md: 2 }}>
             <img onClick={props.handleOpenThree} src={BeatBox} style={style.image} alt="beatbox website preview" />
         </Box>
         <Box sx={style.titleBox} pt={3} pb={3}>

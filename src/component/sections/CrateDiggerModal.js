@@ -15,7 +15,7 @@ import { style } from './Work';
 
 export function CrateDiggerModal(props) {
     return (<Box style={style.card}>
-        <Box style={style.frame}>
+        <Box style={style.frame} mr={{ xs: 0, sm: 0, md: 2 }}>
             <img onClick={props.handleOpenTwo} src={CrateDigger} style={style.image} alt="cratedigger website preview" />
         </Box>
         <Box sx={style.titleBox} pt={3} pb={3}>

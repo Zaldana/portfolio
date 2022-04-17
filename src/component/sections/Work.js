@@ -62,7 +62,7 @@ function Work() {
             <Stack
                 direction={{ xs: 'column', sm: 'column', md: 'row' }}
                 alignItems={{ xs: "center", sm: "center", md: "center" }}
-                justifyContent={{ xs: "center", sm: "center", md: "space-between" }}
+                justifyContent={{ xs: "center", sm: "center", md: "space-around" }}
                 pl={{ xs: 0, sm: 0, md: 10 }}
                 pr={{ xs: 0, sm: 0, md: 10 }}
             >
@@ -91,7 +91,6 @@ export const style = {
         height: "100%",
     },
     frame: {
-        minWidth: "25vw",
         height: "20vh",
         border: "solid 1px blue",
         boxShadow: "0px 0px 10px 2px rgba(123, 89, 255, 0.86)",
@@ -99,8 +98,8 @@ export const style = {
     },
     image: {
         borderRadius: "10px",
-        height: "100%",
-        width: "100%",
+        height: "20vh",
+        minWidth: "350px",
         objectFit: "cover"
     },
     modal: {

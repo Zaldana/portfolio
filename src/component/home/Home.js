@@ -43,7 +43,6 @@ function Home() {
         >
           <Box
             height={{ xs: "25vh", sm: "25vh", md: "40vh" }}
-
           >
             <img src={Hero}
               style={{
@@ -63,9 +62,13 @@ function Home() {
               <Typography
                 sx={{ fontFamily: "Bebas Neue", color: "white", marginBottom: "-100px" }} variant="h3">
                 Web Developer
-              </Typography>
-                <img src={Li} style={{ height: "50px" }} />
-                <img src={GitHub} style={{ height: "50px" }} />
+                </Typography>
+                
+                <Box height={{ xs: "25px", sm: "30px", md: "50px" }}>
+                  <img src={GitHub} style={{ height: "100%", marginRight: "5px", marginLeft: "15px" }} />
+                  <img src={Li} style={{ height: "100%", marginRight: "5px", marginLeft: "15px" }} />
+             
+                </Box>
               </Box>
             </ThemeProvider>
           </Box>
@@ -133,7 +136,7 @@ theme.typography.h1 = {
   },
   [ theme.breakpoints.up('md') ]: {
     fontSize: '8rem',
-    textAlign: 'right',
+    textAlign: 'left',
   },
 };
 

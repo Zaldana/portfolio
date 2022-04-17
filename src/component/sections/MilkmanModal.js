@@ -17,7 +17,7 @@ import { style } from './Work';
 
 export function MilkmanModal(props) {
     return (<Box style={style.card}>
-        <Box style={style.frame}>
+        <Box style={style.frame} mr={{ xs: 0, sm: 0, md: 2 }}>
             <img onClick={props.handleOpenOne} src={Milkman} style={style.image} alt="milkman website preview" />
         </Box>
         <Box sx={style.titleBox} pt={3} pb={3}>
