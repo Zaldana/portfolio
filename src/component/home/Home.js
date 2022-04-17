@@ -6,6 +6,12 @@ import { ParallaxLayer } from '@react-spring/parallax';
 import Work from '../sections/Work'
 import CSS from "../../images/css.png"
 import Resume from '../sections/Resume';
+import Hero from "../../images/hero.png"
+import "./Particle.scss"
+import { Particles } from './Particles';
+import Li from "../../images/li.png"
+import GitHub from "../../images/GitHub.png"
+
 
 function Home() {
   return (
@@ -22,37 +28,48 @@ function Home() {
           background: "linear-gradient(216deg, rgba(0, 0, 0, 1) 0%, rgba(19, 3, 55, 1) 73%)"
         }}
       >
+        <Particles />
+
         <Stack
           direction={{ xs: 'column', sm: 'column', md: 'row' }}
           spacing={{ xs: 1, sm: 2 }}
           sx={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
+            position: "relative"
           }}
           mt={15}
         >
           <Box
-            sx={{
-              border: "solid 5px red",
-              height: "30vh",
-              width: "25vw",
-            }}>
+            height={{ xs: "25vh", sm: "25vh", md: "40vh" }}
+
+          >
+            <img src={Hero}
+              style={{
+                height: "100%",
+                objectFit: "cover"
+              }}
+            />
           </Box>
-          
+
           <Box>
             <ThemeProvider theme={theme}>
               <Typography
                 sx={{ fontFamily: "Bebas Neue", color: "white" }} variant="h1">
                 Ruben Zaldana
               </Typography>
+              <Box sx={{ display: "flex" }}>
               <Typography
-                sx={{ fontFamily: "Bebas Neue", color: "white", marginBottom: "-100px"}} variant="h3">
+                sx={{ fontFamily: "Bebas Neue", color: "white", marginBottom: "-100px" }} variant="h3">
                 Web Developer
               </Typography>
+                <img src={Li} style={{ height: "50px" }} />
+                <img src={GitHub} style={{ height: "50px" }} />
+              </Box>
             </ThemeProvider>
           </Box>
-          
+
         </Stack>
       </ParallaxLayer>
       <ParallaxLayer
@@ -65,13 +82,19 @@ function Home() {
         </Box>
       </ParallaxLayer>
       <ParallaxLayer
-        offset={1.2}
+        offset={.9}
+        factor={.9}
+        speed={1}
+        style={{
+          zIndex: -1,
+          background: "linear-gradient(216deg, rgba(0, 0, 0, 1) 0%, rgba(19, 3, 55, 1) 73%)"
+        }}
       >
-        <Box sx={{ color: "white", height: "100px" }}>
+        <Box sx={{ width: "100%" }}>
           <Resume />
         </Box>
       </ParallaxLayer>
-      <ParallaxLayer
+      {/* <ParallaxLayer
         offset={3}
       >
         <Box sx={{ color: "white", height: "100px" }}>
@@ -84,7 +107,7 @@ function Home() {
         <Box sx={{ color: "white", height: "100px" }}>
           About & Contact
         </Box>
-      </ParallaxLayer>
+      </ParallaxLayer> */}
     </Box>
   )
 }
@@ -92,26 +115,26 @@ function Home() {
 export default Home
 
 const style = {
-    background: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        background: "linear-gradient(216deg, rgba(0, 0, 0, 1) 0%, rgba(19, 3, 55, 1) 73%)" 
-    },
+  background: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    background: "linear-gradient(216deg, rgba(0, 0, 0, 1) 0%, rgba(19, 3, 55, 1) 73%)"
+  },
 }
 
 const theme = createTheme();
 
 theme.typography.h1 = {
-    fontSize: '2.5rem',
-    '@media (min-width:886px)': {
-      fontSize: '1.5rem',
+  fontSize: '2.5rem',
+  '@media (min-width:886px)': {
+    fontSize: '1.5rem',
 
-    },
-    [ theme.breakpoints.up('md') ]: {
-      fontSize: '8rem',
-      textAlign: 'right',
-    },
+  },
+  [ theme.breakpoints.up('md') ]: {
+    fontSize: '8rem',
+    textAlign: 'right',
+  },
 };
 
 theme.typography.h3 = {

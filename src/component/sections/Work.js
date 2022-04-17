@@ -5,7 +5,8 @@ import {
     Typography,
     Box,
     Stack,
-    Button} from '@mui/material';
+    Button
+} from '@mui/material';
 import { MilkmanModal } from './MilkmanModal';
 import { CrateDiggerModal } from './CrateDiggerModal';
 import { BeatBoxModal } from './BeatBoxModal';
@@ -29,10 +30,10 @@ function Work() {
     return (
         <Box
             sx={{
-                border: "rgba(0, 0, 0, .1) 2px solid",
                 display: "flex",
-                background: "linear-gradient(216deg, rgba(0, 0, 0, 1) 0%, rgba(19, 3, 55, 1) 73%)",
-                boxShadow: "0px 0px 10px 3px rgba(123, 89, 255, 0.86)",
+                background: "rgb(5, 15, 55)", 
+                boxShadow: "0px 0px 7px 3px rgba(123, 89, 255, 0.86)",
+                background: "linear-gradient(10deg, rgba(0, 0, 0, 1) 10%, rgba(5, 15, 55, 1) 73%)",
                 flexDirection: "column",
             }}
 
@@ -108,7 +109,8 @@ export const style = {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: "80%",
-        bgcolor: 'rgba(0,0,0,.85)',
+        bgcolor: 'rgba(5, 15, 55, .86)',
+        border: "1px solid rgb(5, 15, 55)",
         borderRadius: '10px',
         boxShadow: 24,
         p: 4,
@@ -127,7 +129,7 @@ export const style = {
     },
     projectMd: {
         textAlign: "left",
-        fontSize: "10vw",
+        fontSize: "7vw",
         color: "white",
         fontFamily: "Bebas Neue",
         paddingLeft: "50px",
