@@ -1,57 +1,91 @@
 import React from 'react'
-import { Box } from '@mui/system'
+import { Box, textAlign } from '@mui/system'
 import { Typography, Stack } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { ParallaxLayer } from '@react-spring/parallax';
 import Work from '../sections/Work'
+import CSS from "../../images/css.png"
+import Resume from '../sections/Resume';
 
 function Home() {
   return (
-          <Box sx={style.background}>
-            <ParallaxLayer offset={0} style={{ zIndex: -1, background: "linear-gradient(216deg, rgba(0, 0, 0, 1) 0%, rgba(19, 3, 55, 1) 73%)"}}>
-              <Stack
-                  direction={{ xs: 'column-reverse', sm: 'column-reverse', md: 'row' }}
-                  spacing={{ xs: 1, sm: 2 }}
-                  mt={"5%"}
-                  sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center"
-                  }}
-              >
-                        <ThemeProvider theme={theme}>
-                            <Typography
-                                alignItems={{ xs: "center", sm: "center", md: "space-around" }}
-                                sx={{ fontFamily: "Bebas Neue", color: "white" }} variant="h1">
-                                    Ruben<br />Zaldana
-                            </Typography>
-                        </ThemeProvider>
-                        <Box sx={{ border: "solid 5px red", height: "40vw", width: "50vw" }}>
-                        </Box>
-                    </Stack>
-                  </ParallaxLayer>
-                  <ParallaxLayer offset={1}>
-                    <Box sx={{width: "100%"}}>
-                        <Work />
-                      </Box>
-                  </ParallaxLayer>
-                  <ParallaxLayer>
-                <Box sx={{ color: "white", height: "100px" }}>
-                    Course work
-                      </Box>
-                  </ParallaxLayer>
-                  <ParallaxLayer>
-                <Box sx={{ color: "white", height: "100px" }}>
-                    Past Experience
-                  </Box>
-                  </ParallaxLayer>
-                  <ParallaxLayer>
-                <Box sx={{ color: "white", height: "100px" }}>
-                    About & Contact
-                      </Box>
-                  </ParallaxLayer>
-            </Box>
-
+    <Box sx={style.background}>
+      <ParallaxLayer
+        offset={0}
+        factor={.9}
+        speed={2}
+        style={{
+          zIndex: -1,
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "center",
+          background: "linear-gradient(216deg, rgba(0, 0, 0, 1) 0%, rgba(19, 3, 55, 1) 73%)"
+        }}
+      >
+        <Stack
+          direction={{ xs: 'column', sm: 'column', md: 'row' }}
+          spacing={{ xs: 1, sm: 2 }}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+          }}
+          mt={15}
+        >
+          <Box
+            sx={{
+              border: "solid 5px red",
+              height: "30vh",
+              width: "25vw",
+            }}>
+          </Box>
+          
+          <Box>
+            <ThemeProvider theme={theme}>
+              <Typography
+                sx={{ fontFamily: "Bebas Neue", color: "white" }} variant="h1">
+                Ruben Zaldana
+              </Typography>
+              <Typography
+                sx={{ fontFamily: "Bebas Neue", color: "white", marginBottom: "-100px"}} variant="h3">
+                Web Developer
+              </Typography>
+            </ThemeProvider>
+          </Box>
+          
+        </Stack>
+      </ParallaxLayer>
+      <ParallaxLayer
+        offset={0.6}
+        factor={.3}
+        speed={1.5}
+      >
+        <Box sx={{ width: "100%" }}>
+          <Work />
+        </Box>
+      </ParallaxLayer>
+      <ParallaxLayer
+        offset={1.2}
+      >
+        <Box sx={{ color: "white", height: "100px" }}>
+          <Resume />
+        </Box>
+      </ParallaxLayer>
+      <ParallaxLayer
+        offset={3}
+      >
+        <Box sx={{ color: "white", height: "100px" }}>
+          Past Experience
+        </Box>
+      </ParallaxLayer>
+      <ParallaxLayer
+        offset={4}
+      >
+        <Box sx={{ color: "white", height: "100px" }}>
+          About & Contact
+        </Box>
+      </ParallaxLayer>
+    </Box>
   )
 }
 
@@ -71,10 +105,20 @@ const theme = createTheme();
 theme.typography.h1 = {
     fontSize: '2.5rem',
     '@media (min-width:886px)': {
-        fontSize: '1.5rem',
+      fontSize: '1.5rem',
+
     },
     [ theme.breakpoints.up('md') ]: {
-        fontSize: '8rem',
-        textAlign: 'right'
+      fontSize: '8rem',
+      textAlign: 'right',
     },
 };
+
+theme.typography.h3 = {
+  fontSize: '1.5rem',
+  textAlign: "center",
+  '@media (min-width:886px)': {
+    fontSize: '3rem',
+    textAlign: "left",
+  }
+}
