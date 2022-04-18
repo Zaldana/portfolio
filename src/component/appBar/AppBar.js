@@ -7,14 +7,13 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = [ 'Projects', 'Resume', 'About', 'Contact', ];
-
 const ResponsiveAppBar = () => {
+
+
+    const pages = [ 'projects', 'about', 'resume', ];
     
     const [ anchorElNav, setAnchorElNav ] = React.useState(null);
 
@@ -39,9 +38,9 @@ const ResponsiveAppBar = () => {
                         variant="h6"
                         noWrap
                         component="div"
-                        sx={{ mr: 2, flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
+                        sx={{ mr: 2, flexGrow: 1, display: { xs: 'none', md: 'flex' }, fontFamily: "Bebas Neue"}}
                     >
-                        RZ
+                        Zaldana
                     </Typography>
                     <Typography
                         variant="h6"
@@ -81,7 +80,7 @@ const ResponsiveAppBar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                <MenuItem key={page} onClick={()=>handleCloseNavMenu()}>
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
@@ -89,13 +88,15 @@ const ResponsiveAppBar = () => {
                     </Box>
                     <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Button
+                    
+                                <Button
                                 key={page}
-                                onClick={handleCloseNavMenu}
+                                onClick={() => handleCloseNavMenu() }
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
                                 {page}
-                            </Button>
+                                </Button>
+                       
                         ))}
                     </Box>
                 </Toolbar>

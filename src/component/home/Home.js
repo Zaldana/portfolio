@@ -11,6 +11,7 @@ import "./Particle.scss"
 import { Particles } from './Particles';
 import Li from "../../images/li.png"
 import GitHub from "../../images/GitHub.png"
+import { Link } from 'react-router-dom'
 
 
 function Home() {
@@ -39,7 +40,7 @@ function Home() {
             justifyContent: "center",
             position: "relative"
           }}
-          mt={15}
+          mt={{ xs: 13, sm:13, md: 8 }}
         >
           <Box
             height={{ xs: "25vh", sm: "25vh", md: "40vh" }}
@@ -58,16 +59,33 @@ function Home() {
                 sx={{ fontFamily: "Bebas Neue", color: "white" }} variant="h1">
                 Ruben Zaldana
               </Typography>
-              <Box sx={{ display: "flex" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: { xs: "column", sm: "column", md: "row" },
+                  justifyContent: "center"
+                }}>
               <Typography
-                sx={{ fontFamily: "Bebas Neue", color: "white", marginBottom: "-100px" }} variant="h3">
+                sx={{ fontFamily: "Bebas Neue", color: "white" }} variant="h3">
                 Web Developer
                 </Typography>
-                
-                <Box height={{ xs: "25px", sm: "30px", md: "50px" }}>
-                  <img src={GitHub} style={{ height: "100%", marginRight: "5px", marginLeft: "15px" }} />
-                  <img src={Li} style={{ height: "100%", marginRight: "5px", marginLeft: "15px" }} />
-             
+                <Box
+                  sx={{
+                    height: "50px",
+                    marginTop: { xs: "20px", sm: "20px", md: "0px" }
+                  }}>
+                  <a href="https://github.com/Zaldana" target="blank">
+                  <img
+                    src={GitHub}
+                    style={style.icons}
+                  />
+                  </a>
+                  <a href="https://www.linkedin.com/in/ruben-zaldana-75278a8a" target="blank">
+                  <img
+                    src={Li}
+                    style={style.icons}
+                  />
+                  </a>
                 </Box>
               </Box>
             </ThemeProvider>
@@ -110,12 +128,17 @@ const style = {
     alignItems: "center",
     background: "linear-gradient(216deg, rgba(0, 0, 0, 1) 0%, rgba(19, 3, 55, 1) 73%)"
   },
+  icons: {
+    height: "100%",
+    marginRight: "5px",
+    marginLeft: "15px"
+  }
 }
 
 const theme = createTheme();
 
 theme.typography.h1 = {
-  fontSize: '2.5rem',
+  fontSize: '3rem',
   '@media (min-width:886px)': {
     fontSize: '1.5rem',
 
@@ -127,7 +150,7 @@ theme.typography.h1 = {
 };
 
 theme.typography.h3 = {
-  fontSize: '1.5rem',
+  fontSize: '2rem',
   textAlign: "center",
   '@media (min-width:886px)': {
     fontSize: '3rem',

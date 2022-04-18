@@ -7,7 +7,6 @@ import Express from '../../images/express.png';
 import Node from '../../images/node.png';
 import Milkman from "../../images/milkman.png";
 import Control from "../../images/control.png"
-import { Link } from 'react-router-dom';
 import {
     Typography,
     Box, Modal,
@@ -20,11 +19,11 @@ export function MilkmanModal(props) {
         <Box sx={style.frame} mr={{ xs: 3, sm: 3, md: 2 }} ml={{ xs: 3, sm: 3, md: 2 }}>
             <img onClick={props.handleOpenOne} src={Milkman} style={style.image} alt="cratedigger website preview" />
         </Box>
-        <Box sx={style.titleBox} pt={3} pb={3}>
+        <Box id="projects" sx={style.titleBox} pt={3} pb={3}>
             <Typography style={style.titles}>Milkman</Typography>
             <img src={Mongo} alt="mongo db logo" style={{
                 height: "30px",
-                width: "28px"
+                paddingRight: 8
             }} />
             <img src={Express} alt="express js logo" style={{
                 height: "25px",
@@ -36,8 +35,9 @@ export function MilkmanModal(props) {
                 width: "30px"
             }} />
             <img src={Node} alt=" node js logo" style={{
-                height: "35px",
-                width: "35px"
+                height: "30px",
+                paddingRight: 5,
+                paddingLeft: 5
             }} />
             <img src={Redux} alt="redux logo" style={{
                 height: "20px",
@@ -68,8 +68,8 @@ export function MilkmanModal(props) {
                 </Typography>
                 <br />
                 <Box>
-                    <Button color="secondary" size="large" variant="contained" href="https://bejewelled-bonbon-6294ce.netlify.app/" style={{ marginRight: "10px" }} target="_blank">Milkman</Button>
-                    <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/milkman-frontend" target="_blank">GitHub</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://bejewelled-bonbon-6294ce.netlify.app/" style={{ marginRight: "10px" }} target="blank">Milkman</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/milkman-frontend" target="blank">GitHub</Button>
                 </Box>
             </Box>
         </Modal>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from '../../images/missing-image.png'
 import { ParallaxLayer } from '@react-spring/parallax';
 import {
     Typography,
@@ -28,13 +27,13 @@ function Work() {
 
 
     return (
-        <Box sx={style.bar}>
+        <Box sx={style.bar} >
             <Box
                 pt={15}
                 sx={{ display: { xs: 'none', sm: 'block' } }}
             >
                 <ParallaxLayer
-                    speed={1.4}
+                    speed={1.1}
                     factor={0}
                     style={{
                         zIndex: -1

@@ -22,7 +22,7 @@ export function CrateDiggerModal(props) {
             <Typography ml={1} style={style.titles}>CrateDigger</Typography>
             <img src={Mongo} alt="mongodb logo" style={{
                 height: "30px",
-                width: "28px"
+                paddingRight: 8
             }} />
             <img src={Express} alt="expressjs logo" style={{
                 height: "25px",
@@ -34,8 +34,9 @@ export function CrateDiggerModal(props) {
                 width: "30px"
             }} />
             <img src={Node} alt="node js logo" style={{
-                height: "35px",
-                width: "35px"
+                height: "30px",
+                paddingRight: 5,
+                paddingLeft: 5
             }} />
             <img src={Bootstrap} alt="bootstrap logo" style={{
                 height: "30px",
@@ -69,8 +70,8 @@ export function CrateDiggerModal(props) {
                 </Typography>
                 <br />
                 <Box>
-                    <Button color="secondary" size="large" variant="contained" href="https://suspicious-bartik-1a8959.netlify.app/" target="_blank" style={{ marginRight: "10px" }}>CrateDigger</Button>
-                    <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/crate-digger-frontend-2" target="_blank">GitHub</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://suspicious-bartik-1a8959.netlify.app/" target="blank" style={{ marginRight: "10px" }}>CrateDigger</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/crate-digger-frontend-2" target="blank">GitHub</Button>
                 </Box>
             </Box>
         </Modal>

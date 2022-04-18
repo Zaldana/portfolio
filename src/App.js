@@ -9,11 +9,11 @@ import Home from './component/home/Home'
 import './App.css';
 
 function App() {
+
   return (
     <div className="App">
-
       <Parallax pages={1.6}>
-        <AppBar />
+        {/* <AppBar /> */}
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />

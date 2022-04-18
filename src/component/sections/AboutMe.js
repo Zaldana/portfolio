@@ -1,7 +1,5 @@
 import React from 'react'
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Particles } from '../home/Particles';
 import Me from '../../images/me.jpg'
@@ -27,12 +25,12 @@ function AboutMe() {
                 About Me
             </Typography>
             <Box
-                mr={{ sm: 5, md: 40 }}
-                ml={{ sm: 5, md: 40 }}
-                pl={{ sm: 5, md: 15 }}
-                pr={{ sm: 5, md: 15 }}
-                pt={{ sm: 2, md: 2 }}
-                pb={{ sm: 2, md: 8 }}
+                mr={{ xs: 5, sm: 5, md: 40 }}
+                ml={{ xs: 5, sm: 5, md: 40 }}
+                pl={{ xs: 5, sm: 5, md: 15 }}
+                pr={{ xs: 5, sm: 5, md: 15 }}
+                pt={{ xs: 2, sm: 2, md: 2 }}
+                pb={{ xs: 2, sm: 2, md: 8 }}
                 sx={{
                     height: "100%",
                     zIndex: 1,
@@ -41,6 +39,7 @@ function AboutMe() {
                     color: "white",
                     borderRadius: "25px"
                 }}
+                id="about"
             >
                 <TabContext value={value}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -50,7 +49,7 @@ function AboutMe() {
                         </TabList>
                     </Box>
                     <TabPanel value="1">
-                        <img src={Me} style={{ borderRadius: "50%", height: "150px", boxShadow: "0px 0px 10px 3px rgba(123, 89, 255, 0.5)" }} />
+                        <img src={Me} style={{ borderRadius: "50%", height: "150px", boxShadow: "0px 0px 10px 3px rgba(123, 89, 255, 0.5)" }} alt="profile" />
                         <Typography variant="h4">
                             Hi, I'm Ruben
                         </Typography>
