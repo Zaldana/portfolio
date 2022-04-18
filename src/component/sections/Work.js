@@ -28,28 +28,19 @@ function Work() {
 
 
     return (
-        <Box
-            sx={{
-                display: "flex",
-                background: "rgb(5, 15, 55)", 
-                boxShadow: "0px 0px 7px 3px rgba(123, 89, 255, 0.86)",
-                background: "linear-gradient(10deg, rgba(0, 0, 0, 1) 10%, rgba(5, 15, 55, 1) 73%)",
-                flexDirection: "column",
-            }}
-
-        >
+        <Box sx={style.bar}>
             <Box
                 pt={15}
                 sx={{ display: { xs: 'none', sm: 'block' } }}
             >
                 <ParallaxLayer
-                    speed={1.5}
+                    speed={1.4}
                     factor={0}
                     style={{
                         zIndex: -1
                     }}
                 >
-                    <Typography sx={style.projectMd}>Projects</Typography>
+                    <Typography mt={5} sx={style.projectMd}>Projects</Typography>
                 </ParallaxLayer>
             </Box>
             <Box
@@ -87,20 +78,30 @@ function Work() {
 export default Work
 
 export const style = {
+    bar: {
+        display: "flex",
+        background: "rgb(5, 15, 55)",
+        background: "linear-gradient(10deg, rgba(0, 0, 0, 1) 10%, rgba(5, 15, 55, 1) 73%)",
+        flexDirection: "column",
+        boxShadow: "0px 0px 15px 6px rgba(123, 89, 255, 0.25)",
+    
+    },
     card: {
         height: "100%",
     },
     frame: {
-        height: "20vh",
-        border: "solid 1px blue",
-        boxShadow: "0px 0px 10px 2px rgba(123, 89, 255, 0.86)",
+        height: "25vh",
         borderRadius: "10px",
+        '&:hover': {
+            boxShadow: "0px 0px 15px 8px rgba(123, 89, 255, 0.7)",
+        }
     },
     image: {
         borderRadius: "10px",
-        height: "20vh",
-        minWidth: "350px",
-        objectFit: "cover"
+        height: "25vh",
+        maxWidth: "400px",
+        objectFit: "cover",
+        cursor: "context-menu"
     },
     modal: {
         position: 'absolute',
@@ -112,7 +113,7 @@ export const style = {
         border: "1px solid rgb(5, 15, 55)",
         borderRadius: '10px',
         boxShadow: 24,
-        p: 4,
+        p: 8,
         color: "white"
     },
     titleBox: {
@@ -131,7 +132,7 @@ export const style = {
         fontSize: "7vw",
         color: "white",
         fontFamily: "Bebas Neue",
-        paddingLeft: "50px",
+        paddingLeft: "70px",
         textShadow: "0px 0px 7px rgba(123, 89, 255, 0.86)"
     },
     projectSm: {

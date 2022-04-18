@@ -13,7 +13,7 @@ import { style } from './Work';
 
 export function BeatBoxModal(props) {
     return (<Box style={style.card}>
-        <Box style={style.frame} mr={{ xs: 0, sm: 0, md: 2 }}>
+        <Box sx={style.frame} mr={{ xs: 0, sm: 0, md: 2 }}>
             <img onClick={props.handleOpenThree} src={BeatBox} style={style.image} alt="beatbox website preview" />
         </Box>
         <Box sx={style.titleBox} pt={3} pb={3}>
@@ -44,7 +44,7 @@ export function BeatBoxModal(props) {
                     <img onClick={props.handleOpenOne} src={BeatBox} style={{ width: "45%", marginRight: "10px" }} alt="milkman website preview" />
                     <img onClick={props.handleOpenOne} src={Seq} style={{ width: "45%" }} alt="milkman admin website preview" />
                 </Box>
-                <Typography id="modal-modal-description" sx={{
+                <Typography id="modal-modal-description" variant="h6" sx={{
                     mt: 2
                 }}>
                     <b>BeatBox</b> is a music making toy featuring a drum-machine, a sequencer, and a playable piano. The drum machine
@@ -54,13 +54,9 @@ export function BeatBoxModal(props) {
                     is made with HTML, CSS, and jquery, and uses local storage to keep selections persistent despite refreshing page. 
                 </Typography>
                 <br />
-                <Typography>
-                    <b>Click for site demo and code</b>
-                </Typography>
-                <br />
                 <Box>
-                    <Button variant="outlined" href="https://zaldana.github.io/beat-box/" target="_blank" style={{ marginRight: "10px" }}>CrateDigger</Button>
-                    <Button variant="outlined" href="https://github.com/Zaldana/beat-box" target="_blank">GitHub</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://zaldana.github.io/beat-box/" target="_blank" style={{ marginRight: "10px" }}>CrateDigger Live</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/beat-box" target="_blank">GitHub</Button>
                 </Box>
             </Box>
         </Modal>

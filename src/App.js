@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
 
-      <Parallax pages={5}>
+      <Parallax pages={1.6}>
         <AppBar />
       <BrowserRouter>
         <Routes>

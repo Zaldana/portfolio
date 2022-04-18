@@ -17,8 +17,8 @@ import { style } from './Work';
 
 export function MilkmanModal(props) {
     return (<Box style={style.card}>
-        <Box style={style.frame} mr={{ xs: 0, sm: 0, md: 2 }}>
-            <img onClick={props.handleOpenOne} src={Milkman} style={style.image} alt="milkman website preview" />
+        <Box sx={style.frame} mr={{ xs: 3, sm: 3, md: 2 }} ml={{ xs: 3, sm: 3, md: 2 }}>
+            <img onClick={props.handleOpenOne} src={Milkman} style={style.image} alt="cratedigger website preview" />
         </Box>
         <Box sx={style.titleBox} pt={3} pb={3}>
             <Typography style={style.titles}>Milkman</Typography>
@@ -58,7 +58,7 @@ export function MilkmanModal(props) {
                     <img onClick={props.handleOpenOne} src={Milkman} style={{ width: "45%", marginRight: "10px" }} alt="milkman website preview" />
                     <img onClick={props.handleOpenOne} src={Control} style={{ width: "45%" }} alt="milkman admin website preview" />
                 </Box>
-                <Typography id="modal-modal-description" sx={{
+                <Typography variant="h6" id="modal-modal-description" sx={{
                     mt: 2
                 }}>
                     <b>Milkman</b> is a MERN stack eCommerce site that emulates a store that sells milk and milk alternative products.
@@ -67,13 +67,9 @@ export function MilkmanModal(props) {
                     was populated using Kroger’s public API and their postman environment.
                 </Typography>
                 <br />
-                <Typography>
-                    <b>Click for site demo and code</b>
-                </Typography>
-                <br />
                 <Box>
-                    <Button variant="outlined" href="https://bejewelled-bonbon-6294ce.netlify.app/" style={{ marginRight: "10px" }} target="_blank">Milkman</Button>
-                    <Button variant="outlined" href="https://github.com/Zaldana/milkman-frontend" target="_blank">GitHub</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://bejewelled-bonbon-6294ce.netlify.app/" style={{ marginRight: "10px" }} target="_blank">Milkman</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/milkman-frontend" target="_blank">GitHub</Button>
                 </Box>
             </Box>
         </Modal>

@@ -15,7 +15,7 @@ import { style } from './Work';
 
 export function CrateDiggerModal(props) {
     return (<Box style={style.card}>
-        <Box style={style.frame} mr={{ xs: 0, sm: 0, md: 2 }}>
+        <Box sx={style.frame} mr={{ xs: 0, sm: 0, md: 2 }}>
             <img onClick={props.handleOpenTwo} src={CrateDigger} style={style.image} alt="cratedigger website preview" />
         </Box>
         <Box sx={style.titleBox} pt={3} pb={3}>
@@ -52,7 +52,7 @@ export function CrateDiggerModal(props) {
                     <img onClick={props.handleOpenOne} src={CrateDiggerHome} style={{ width: "45%", marginRight: "10px" }} alt="milkman website preview" />
                     <img onClick={props.handleOpenOne} src={CrateDigger} style={{ width: "45%" }} alt="milkman admin website preview" />
                 </Box>
-                <Typography id="modal-modal-description" sx={{
+                <Typography variant="h6" id="modal-modal-description" sx={{
                     mt: 2
                 }}>
                     <b>CrateDigger</b> is designed to focus the abilities of the Discogs public API to find vinyl specific releases, 
@@ -69,8 +69,8 @@ export function CrateDiggerModal(props) {
                 </Typography>
                 <br />
                 <Box>
-                    <Button variant="outlined" href="https://suspicious-bartik-1a8959.netlify.app/" target="_blank" style={{ marginRight: "10px" }}>CrateDigger</Button>
-                    <Button variant="outlined" href="https://github.com/Zaldana/crate-digger-frontend-2" target="_blank">GitHub</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://suspicious-bartik-1a8959.netlify.app/" target="_blank" style={{ marginRight: "10px" }}>CrateDigger</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/crate-digger-frontend-2" target="_blank">GitHub</Button>
                 </Box>
             </Box>
         </Modal>

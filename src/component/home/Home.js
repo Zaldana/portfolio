@@ -5,7 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { ParallaxLayer } from '@react-spring/parallax';
 import Work from '../sections/Work'
 import CSS from "../../images/css.png"
-import Resume from '../sections/Resume';
+import AboutMe from '../sections/AboutMe';
 import Hero from "../../images/hero.png"
 import "./Particle.scss"
 import { Particles } from './Particles';
@@ -85,8 +85,8 @@ function Home() {
         </Box>
       </ParallaxLayer>
       <ParallaxLayer
-        offset={.9}
-        factor={.9}
+        offset={.87}
+        factor={1.5}
         speed={1}
         style={{
           zIndex: -1,
@@ -94,23 +94,9 @@ function Home() {
         }}
       >
         <Box sx={{ width: "100%" }}>
-          <Resume />
+          <AboutMe />
         </Box>
       </ParallaxLayer>
-      {/* <ParallaxLayer
-        offset={3}
-      >
-        <Box sx={{ color: "white", height: "100px" }}>
-          Past Experience
-        </Box>
-      </ParallaxLayer>
-      <ParallaxLayer
-        offset={4}
-      >
-        <Box sx={{ color: "white", height: "100px" }}>
-          About & Contact
-        </Box>
-      </ParallaxLayer> */}
     </Box>
   )
 }
