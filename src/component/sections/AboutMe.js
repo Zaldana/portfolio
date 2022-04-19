@@ -22,8 +22,8 @@ function AboutMe() {
         
         <Box>
             <Box
-                mr={{ xs: 5, sm: 5, md: 15}}
-                ml={{ xs: 5, sm: 5, md: 15 }}
+                mr={{ xs: 0, sm: 0, md: 15}}
+                ml={{ xs: 0, sm: 0, md: 15 }}
                 pl={{ xs: 0, sm: 0, md: 5 }}
                 pr={{ xs: 0, sm: 0, md: 5 }}
                 pt={{ xs: .2, sm: .2, md: 2 }}
@@ -45,17 +45,16 @@ function AboutMe() {
                     </Box>
                     <TabPanel value="1">
                         <img src={Me} style={{ borderRadius: "50%", height: "150px", boxShadow: "0px 0px 10px 3px rgba(123, 89, 255, 0.5)" }} alt="profile" />
-                        <Typography variant="h4">
+                        <Typography variant="h5">
                             Hi, I'm Ruben
                         </Typography>
                         <br />
-                        <Typography sx={{ textAlign: { sm: 'center', md: 'justify' }, fontSize: "17px" }}>
-                            From 2014 - 2021 I worked as a civilian marketing specialist for the U.S. Air Force. Our mission was to promote
-                            and establish morale and welfare programs for the military communities at Kadena Air Base in Japan and the
+                        <Typography sx={{ textAlign: { xs: "center", sm: 'center', md: 'justify' }, fontSize: "17px" }}>
+                            From 2014 - 2021 I worked as a civilian marketing specialist for the U.S. Air Force at Kadena Air Base in Japan and the
                             Royal Air Force Base Lakenheath in the UK. My responsibilities ranged from driving sales, photography,
                             video production, graphic design, social media marketing, and magazine design. Due to the pandemic our office
                             made a digital pivot, and I began working much closer with our webmaster. That’s where my love affair
-                            with web development began.I found the cocktail of craft, creativity and problem solving very attractive.
+                            with web development began. I found the cocktail of craft, creativity and problem solving very attractive.
                             As soon as I came back to the US, I enrolled in Code Immersives’ year long MERN based web development program.
                             During my attendance I have learned the basics of programing, created several full stack projects,
                             and I'm currently working on getting my AWS cloud practitioner certification.

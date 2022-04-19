@@ -1,81 +1,3 @@
-import React from 'react';
-import { ParallaxLayer, Parallax } from '@react-spring/parallax';
-import {
-    Typography,
-    Box,
-    Stack,
-    Button
-} from '@mui/material';
-import { MilkmanModal } from './MilkmanModal';
-import { CrateDiggerModal } from './CrateDiggerModal';
-import { BeatBoxModal } from './BeatBoxModal';
-
-
-function Work() {
-
-    const [ openOne, setOpenOne ] = React.useState(false);
-    const handleOpenOne = () => setOpenOne(true);
-    const handleCloseOne = () => setOpenOne(false);
-
-    const [ openTwo, setOpenTwo ] = React.useState(false);
-    const handleOpenTwo = () => setOpenTwo(true);
-    const handleCloseTwo = () => setOpenTwo(false);
-
-    const [ openThree, setOpenThree ] = React.useState(false);
-    const handleOpenThree = () => setOpenThree(true);
-    const handleCloseThree = () => setOpenThree(false);
-
-
-    return (
-    
-        <Box sx={style.bar} >
-            <Box
-                pt={15}
-                sx={{ display: { xs: 'none', sm: 'block' } }}
-            >
-                <ParallaxLayer
-                    speed={1.5}
-                    offset={1}
-                    style={{
-                        zIndex: -1
-                    }}
-                >
-                    <Typography mt={5} sx={style.projectMd}>Projects</Typography>
-                </ParallaxLayer>
-            </Box>
-            <Box
-                pt={5} pb={4}
-                sx={{ display: { xs: 'block', sm: 'none' } }}
-            >
-                <Typography sx={style.projectSm}>Projects</Typography>
-            </Box>
-
-            <Stack
-                direction={{ xs: 'column', sm: 'column', md: 'row' }}
-                alignItems={{ xs: "center", sm: "center", md: "center" }}
-                justifyContent={{ xs: "center", sm: "center", md: "space-around" }}
-                pl={{ xs: 0, sm: 0, md: 10 }}
-                pr={{ xs: 0, sm: 0, md: 10 }}
-            >
-
-
-                <CrateDiggerModal openTwo={openTwo} handleOpenTwo={handleOpenTwo} handleCloseTwo={handleCloseTwo} />
-
-                <BeatBoxModal openThree={openThree} handleOpenThree={handleOpenThree} handleCloseThree={handleCloseThree} />
-
-            </Stack>
-
-            <Box
-                pb={12}
-                sx={{ display: { xs: 'none', sm: 'block' } }}
-            >
-            </Box>
-            </Box>
-
-    )
-}
-
-export default Work
 
 export const style = {
     bar: {
@@ -108,7 +30,7 @@ export const style = {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: "80%",
+        width: "75%",
         bgcolor: 'rgba(5, 15, 55, .86)',
         border: "1px solid rgb(5, 15, 55)",
         borderRadius: '10px',

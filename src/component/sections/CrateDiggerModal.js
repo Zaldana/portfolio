@@ -9,8 +9,9 @@ import CrateDiggerHome from "../../images/cratediggerhome.png";
 import {
     Typography,
     Box, Modal,
-    Button
+    Button, IconButton
 } from '@mui/material';
+import DoNotDisturbOnIcon from '@mui/icons-material/DoNotDisturbOn';
 import { style } from './Work';
 
 export function CrateDiggerModal(props) {
@@ -45,24 +46,29 @@ export function CrateDiggerModal(props) {
         </Box>
         <Modal open={props.openTwo} onClose={props.handleCloseTwo} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
             <Box sx={style.modal}>
-                <Typography id="modal-modal-title" variant="h2" component="h2" sx={{ fontFamily: "Bebas Neue" }}>
-                    Cratedigger
-                </Typography>
+                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                    <Typography id="modal-modal-title" variant="h2" component="h2" sx={{ fontFamily: "Bebas Neue" }}>
+                        Beatbox
+                    </Typography>
+                    <IconButton aria-label="delete" size="large" color="secondary" onClick={props.handleCloseTwo}>
+                        <DoNotDisturbOnIcon fontSize="large" />
+                    </IconButton>
+                </Box>
                 <br />
-                <Box style={{ display: "flex", justifyContent: "flex-start", flexWrap: "wrap" }}>
-                    <img onClick={props.handleOpenOne} src={CrateDiggerHome} style={{ width: "45%", marginRight: "10px" }} alt="milkman website preview" />
-                    <img onClick={props.handleOpenOne} src={CrateDigger} style={{ width: "45%" }} alt="milkman admin website preview" />
+                <Box style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+                    <img src={CrateDiggerHome} style={{ width: "45%", marginRight: "10px" }} alt="milkman website preview" />
+                    <img src={CrateDigger} style={{ width: "45%" }} alt="milkman admin website preview" />
                 </Box>
                 <Typography id="modal-modal-description" sx={{
                     mt: 2
                 }}>
                     <b>CrateDigger</b> is designed to focus the abilities of the Discogs public API to help curate the user’s personal vinyl record library, and to help make
-                    quick purchasing decisions through organization of a wish list. The front-end is styled with Bootstrap, Chart.js library to visualize 
-                    user data, and React-Toastify for alerts. The site has three collections in the database that stores the user’s information, 
-                    the main vinyl collection, and the wish list collection. The user is authenticated with JWT-Passport. 
+                    quick purchasing decisions through organization of a wish list. The front-end is styled with Bootstrap, Chart.js library to visualize
+                    user data, and React-Toastify for alerts. The site has three collections in the database that stores the user’s information,
+                    the main vinyl collection, and the wish list collection. The user is authenticated with JWT-Passport.
                 </Typography>
                 <br />
-   
+
                 <Box>
                     <Button color="secondary" size="large" variant="contained" href="https://suspicious-bartik-1a8959.netlify.app/" target="blank" style={{ marginRight: "10px" }}>CrateDigger</Button>
                     <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/crate-digger-frontend-2" target="blank">GitHub</Button>

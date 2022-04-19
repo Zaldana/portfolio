@@ -83,7 +83,7 @@ function Home() {
           justifyContent: "center",
         }}
       >
-   
+
 
         <Stack
           direction={{ xs: 'column', sm: 'column', md: 'row' }}
@@ -107,7 +107,7 @@ function Home() {
             />
           </Box>
 
-       
+
           <Box>
             <ThemeProvider theme={theme}>
               <Typography
@@ -154,7 +154,6 @@ function Home() {
       <ParallaxLayer
         offset={1}
         speed={0}
-     
         style={{
           background: "linear-gradient(10deg, rgba(0, 0, 0, 1) 10%, rgba(5, 15, 55, 1) 73%)",
           zIndex: 0,
@@ -172,15 +171,13 @@ function Home() {
         }}
       >
         <Box
-          sx={{ display: { xs: 'none', sm: 'none', md: 'block'  } }}
+          sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
         >
           <Typography sx={style.projectMd}>
             Projects
           </Typography>
         </Box>
       </ParallaxLayer>
-
-
       <ParallaxLayer
         speed={.6}
         offset={1}
@@ -194,10 +191,8 @@ function Home() {
           <Typography sx={style.projectMd}>
             Projects
           </Typography>
-      </Box>
+        </Box>
       </ParallaxLayer>
-
-      
       <ParallaxLayer
         speed={.9}
         offset={1}
@@ -231,17 +226,24 @@ function Home() {
           pl={{ xs: 0, sm: 0, md: 10 }}
           pr={{ xs: 0, sm: 0, md: 10 }}
         >
+          <Box
+            sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }}
+          >
+            <Typography sx={style.projectSm}>
+              Projects
+            </Typography>
+          </Box>
 
           <MilkmanModal openOne={openOne} handleOpenOne={handleOpenOne} handleCloseOne={handleCloseOne} />
 
           <CrateDiggerModal openTwo={openTwo} handleOpenTwo={handleOpenTwo} handleCloseTwo={handleCloseTwo} />
 
           <BeatBoxModal openThree={openThree} handleOpenThree={handleOpenThree} handleCloseThree={handleCloseThree} />
-        
-        </Stack>
-      </ParallaxLayer> 
 
-{/* ///////////////////////////////////////////////About ME////////////////////////////////////////////////////// */}
+        </Stack>
+      </ParallaxLayer>
+
+      {/* ///////////////////////////////////////////////About ME////////////////////////////////////////////////////// */}
 
       <ParallaxLayer
         offset={2}
@@ -251,7 +253,7 @@ function Home() {
           background: "linear-gradient(216deg, rgba(0, 0, 0, 1) 0%, rgba(19, 3, 55, 1) 73%)"
         }}
       >
-        
+
         <Particles />
 
       </ParallaxLayer>
@@ -289,7 +291,6 @@ function Home() {
         </Box>
       </ParallaxLayer>
 
-
       <ParallaxLayer
         speed={.9}
         offset={2}
@@ -305,6 +306,21 @@ function Home() {
           </Typography>
         </Box>
       </ParallaxLayer>
+      <ParallaxLayer
+        speed={.9}
+        offset={2}
+        style={{
+          zIndex: 1
+        }}
+      >
+        <Box
+          sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }}
+        >
+          <Typography sx={style.projectSm}>
+            About Me
+          </Typography>
+        </Box>
+      </ParallaxLayer>
 
       <ParallaxLayer
         offset={2}
@@ -316,6 +332,7 @@ function Home() {
           zIndex: 5
         }}
       >
+        
         <AboutMe />
       </ParallaxLayer>
 
@@ -364,16 +381,7 @@ export const style = {
     boxShadow: "0px 0px 15px 6px rgba(123, 89, 255, 0.25)",
 
   },
-  // card: {
-  //   // height: "100%",
-  // },
-  // frame: {
-  //   height: "25vh",
-  //   borderRadius: "10px",
-  //   '&:hover': {
-  //     boxShadow: "0px 0px 15px 8px rgba(123, 89, 255, 0.7)",
-  //   }
-  // },
+
   image: {
     borderRadius: "10px",
     height: "25vh",
