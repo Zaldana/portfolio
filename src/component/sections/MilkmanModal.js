@@ -13,9 +13,13 @@ import {
     Button
 } from '@mui/material';
 import { style } from './Work';
+import { ParallaxLayer } from '@react-spring/parallax';
 
 export function MilkmanModal(props) {
-    return (<Box style={style.card}>
+    return (
+
+        <Box style={style.card}>
+
         <Box sx={style.frame} mr={{ xs: 3, sm: 3, md: 2 }} ml={{ xs: 3, sm: 3, md: 2 }}>
             <img onClick={props.handleOpenOne} src={Milkman} style={style.image} alt="cratedigger website preview" />
         </Box>
@@ -58,7 +62,7 @@ export function MilkmanModal(props) {
                     <img onClick={props.handleOpenOne} src={Milkman} style={{ width: "45%", marginRight: "10px" }} alt="milkman website preview" />
                     <img onClick={props.handleOpenOne} src={Control} style={{ width: "45%" }} alt="milkman admin website preview" />
                 </Box>
-                <Typography variant="h6" id="modal-modal-description" sx={{
+                <Typography id="modal-modal-description" sx={{
                     mt: 2
                 }}>
                     <b>Milkman</b> is a MERN stack eCommerce site that emulates a store that sells milk and milk alternative products.
@@ -73,5 +77,8 @@ export function MilkmanModal(props) {
                 </Box>
             </Box>
         </Modal>
-    </Box>);
+    </Box>
+
+    
+    );
 }

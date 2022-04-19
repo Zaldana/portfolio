@@ -8,6 +8,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { IconTab } from './IconTab';
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 function AboutMe() {
 
@@ -18,23 +19,17 @@ function AboutMe() {
     };
 
     return (
+        
         <Box>
-            <Particles />
-            <Box mt={90} display={{ sm: 'block', md: 'none' }} ></Box>
-            <Typography sx={style.projectMd} display={{ xs: "none", sm: 'none', md: 'block' }}>
-                About Me
-            </Typography>
             <Box
-                mr={{ xs: 5, sm: 5, md: 40 }}
-                ml={{ xs: 5, sm: 5, md: 40 }}
-                pl={{ xs: 5, sm: 5, md: 15 }}
-                pr={{ xs: 5, sm: 5, md: 15 }}
-                pt={{ xs: 2, sm: 2, md: 2 }}
-                pb={{ xs: 2, sm: 2, md: 8 }}
+                mr={{ xs: 5, sm: 5, md: 15}}
+                ml={{ xs: 5, sm: 5, md: 15 }}
+                pl={{ xs: 0, sm: 0, md: 5 }}
+                pr={{ xs: 0, sm: 0, md: 5 }}
+                pt={{ xs: .2, sm: .2, md: 2 }}
+                pb={{ xs: .5, sm: .5, md: 5 }}
                 sx={{
                     height: "100%",
-                    zIndex: 1,
-                    position: "relative",
                     background: "rgba(5, 15, 55, .8)",
                     color: "white",
                     borderRadius: "25px"
@@ -72,7 +67,7 @@ function AboutMe() {
                     </TabPanel>
                 </TabContext>
             </Box>
-        </Box>
+            </Box>
     )
 }
 

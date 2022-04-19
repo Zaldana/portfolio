@@ -12,7 +12,8 @@ import {
 import { style } from './Work';
 
 export function BeatBoxModal(props) {
-    return (<Box style={style.card}>
+    return (
+        <Box style={style.card}>
         <Box sx={style.frame} mr={{ xs: 0, sm: 0, md: 2 }}>
             <img onClick={props.handleOpenThree} src={BeatBox} style={style.image} alt="beatbox website preview" />
         </Box>
@@ -44,12 +45,11 @@ export function BeatBoxModal(props) {
                     <img onClick={props.handleOpenOne} src={BeatBox} style={{ width: "45%", marginRight: "10px" }} alt="milkman website preview" />
                     <img onClick={props.handleOpenOne} src={Seq} style={{ width: "45%" }} alt="milkman admin website preview" />
                 </Box>
-                <Typography id="modal-modal-description" variant="h6" sx={{
+                <Typography id="modal-modal-description"  sx={{
                     mt: 2
                 }}>
                     <b>BeatBox</b> is a music making toy featuring a drum-machine, a sequencer, and a playable piano. The drum machine
-                    pads have five sounds that will play when selected.You can enable a sound by clicking on one of the pads. 
-                    The Sequence Grid allows you to select which notes you would like to play at a particular beat by clicking on a cell. 
+                    pads have five sounds that will play when selected. The Sequence Grid allows you to select which notes you would like to play at a particular beat by clicking on a cell. 
                     The Keyboard section can be used by clicking on the keys with a mouse or by typing using the labeled keys. BeatBox 
                     is made with HTML, CSS, and jquery, and uses local storage to keep selections persistent despite refreshing page. 
                 </Typography>

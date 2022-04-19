@@ -53,22 +53,16 @@ export function CrateDiggerModal(props) {
                     <img onClick={props.handleOpenOne} src={CrateDiggerHome} style={{ width: "45%", marginRight: "10px" }} alt="milkman website preview" />
                     <img onClick={props.handleOpenOne} src={CrateDigger} style={{ width: "45%" }} alt="milkman admin website preview" />
                 </Box>
-                <Typography variant="h6" id="modal-modal-description" sx={{
+                <Typography id="modal-modal-description" sx={{
                     mt: 2
                 }}>
-                    <b>CrateDigger</b> is designed to focus the abilities of the Discogs public API to find vinyl specific releases, 
-                    and allow a curation of the user’s personal library, and to help make quick purchasing decisions through 
-                    organization of a wish list. The front-end is styled with React-Bootstrap, Chart.js library to visualize 
+                    <b>CrateDigger</b> is designed to focus the abilities of the Discogs public API to help curate the user’s personal vinyl record library, and to help make
+                    quick purchasing decisions through organization of a wish list. The front-end is styled with Bootstrap, Chart.js library to visualize 
                     user data, and React-Toastify for alerts. The site has three collections in the database that stores the user’s information, 
-                    the main vinyl collection, and the wish list collection.  The user is authenticated with JWT-Passport an 
-                    authenticating middleware and validation for the user is handled through validation middleware 
-                    that uses the validator library. 
+                    the main vinyl collection, and the wish list collection. The user is authenticated with JWT-Passport. 
                 </Typography>
                 <br />
-                <Typography>
-                    <b>Click for site demo and code</b>
-                </Typography>
-                <br />
+   
                 <Box>
                     <Button color="secondary" size="large" variant="contained" href="https://suspicious-bartik-1a8959.netlify.app/" target="blank" style={{ marginRight: "10px" }}>CrateDigger</Button>
                     <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/crate-digger-frontend-2" target="blank">GitHub</Button>

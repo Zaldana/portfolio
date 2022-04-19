@@ -1,5 +1,5 @@
 import React from 'react';
-import { ParallaxLayer } from '@react-spring/parallax';
+import { ParallaxLayer, Parallax } from '@react-spring/parallax';
 import {
     Typography,
     Box,
@@ -27,14 +27,15 @@ function Work() {
 
 
     return (
+    
         <Box sx={style.bar} >
             <Box
                 pt={15}
                 sx={{ display: { xs: 'none', sm: 'block' } }}
             >
                 <ParallaxLayer
-                    speed={1.1}
-                    factor={0}
+                    speed={1.5}
+                    offset={1}
                     style={{
                         zIndex: -1
                     }}
@@ -57,7 +58,6 @@ function Work() {
                 pr={{ xs: 0, sm: 0, md: 10 }}
             >
 
-                <MilkmanModal openOne={openOne} handleOpenOne={handleOpenOne} handleCloseOne={handleCloseOne} />
 
                 <CrateDiggerModal openTwo={openTwo} handleOpenTwo={handleOpenTwo} handleCloseTwo={handleCloseTwo} />
 
@@ -70,7 +70,8 @@ function Work() {
                 sx={{ display: { xs: 'none', sm: 'block' } }}
             >
             </Box>
-        </Box>
+            </Box>
+
     )
 }
 
@@ -112,7 +113,7 @@ export const style = {
         border: "1px solid rgb(5, 15, 55)",
         borderRadius: '10px',
         boxShadow: 24,
-        p: 8,
+        p: 5,
         color: "white"
     },
     titleBox: {
