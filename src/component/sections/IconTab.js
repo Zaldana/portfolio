@@ -45,11 +45,11 @@ export function IconTab() {
                 height: "80px",
                 padding: 4
             }} />
-            <img src={JS} alt="jquery logo" style={{
+            <img src={JS} alt="javascript logo" style={{
                 height: "70px",
                 padding: 4
             }} />
-            <img src={Figma} alt="jquery logo" style={{
+            <img src={Figma} alt="figma logo" style={{
                 height: "70px",
                 padding: 4
             }} />
@@ -61,41 +61,41 @@ export function IconTab() {
                 </Typography>
             </Box>
 
-            <img src={ReactLogo} alt="css logo" style={{
+            <img src={ReactLogo} alt="react logo" style={{
                 height: "80px",
                 padding: 4
             }} />
-            <img src={Redux} alt="css logo" style={{
+            <img src={Redux} alt="redux logo" style={{
                 height: "68px",
                 padding: 4
             }} />
-            <img src={JQuery} alt="html logo" style={{
+            <img src={JQuery} alt="jquery logo" style={{
                 height: "80px",
                 padding: 4
             }} />
-            <img src={Bootstrap} alt="css logo" style={{
+            <img src={Bootstrap} alt="bootstrap logo" style={{
                 height: "70px",
                 padding: 4
             }} />
-            <img src={Mui} alt="css logo" style={{
+            <img src={Mui} alt="mui logo" style={{
                 height: "80px",
                 padding: 4
             }} />
         </Box>
         <Box sx={style.iconRow}>
-            <img src={Express} alt="html logo" style={{
+            <img src={Express} alt="express logo" style={{
                 height: "80px",
                 padding: 4
             }} />
-            <img src={Node} alt="css logo" style={{
+            <img src={Node} alt="node logo" style={{
                 height: "80px",
                 padding: 6
             }} />
-            <img src={AWS} alt="css logo" style={{
+            <img src={AWS} alt="aws logo" style={{
                 height: "55px",
                 padding: 6
             }} />
-            <img src={Mongo} alt="css logo" style={{
+            <img src={Mongo} alt="mongodb logo" style={{
                 height: "78px",
                 paddingLeft: 15
             }} />

@@ -56,7 +56,7 @@ export function MilkmanModal(props) {
                 <Box sx={style.modal}>
                     <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                         <Typography id="modal-modal-title" variant="h2" component="h2" sx={{ fontFamily: "Bebas Neue" }}>
-                            Beatbox
+                            Milkman
                         </Typography>
                         <IconButton aria-label="delete" size="large" color="secondary" onClick={props.handleCloseOne}>
                             <DoNotDisturbOnIcon fontSize="large" />
@@ -70,10 +70,7 @@ export function MilkmanModal(props) {
                     <Typography id="modal-modal-description" sx={{
                         mt: 2
                     }}>
-                        <b>Milkman</b> is a MERN stack eCommerce site that emulates a store that sells milk and milk alternative products.
-                        In addition, the site also features an admin mode where changes to the database can be made from the frontend
-                        with proper credentials.The shopping cart is created using Redux, and the site is styled with MUI.The database
-                        was populated using Kroger’s public API and their postman environment.
+                        <b>Milkman</b> is a MERN stack eCommerce site that emulates a store that sells milk and milk-alternative products. In addition, the site also features an administrative mode where changes to the database can be made from the front end with proper credentials. The shopping cart is created using Redux, and the site is styled with MUI. The database was populated using Kroger’s public API and their postman environment.
                     </Typography>
                     <br />
                     <Box>

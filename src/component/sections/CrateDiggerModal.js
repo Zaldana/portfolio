@@ -48,7 +48,7 @@ export function CrateDiggerModal(props) {
             <Box sx={style.modal}>
                 <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                     <Typography id="modal-modal-title" variant="h2" component="h2" sx={{ fontFamily: "Bebas Neue" }}>
-                        Beatbox
+                      CrateDigger
                     </Typography>
                     <IconButton aria-label="delete" size="large" color="secondary" onClick={props.handleCloseTwo}>
                         <DoNotDisturbOnIcon fontSize="large" />
@@ -62,10 +62,7 @@ export function CrateDiggerModal(props) {
                 <Typography id="modal-modal-description" sx={{
                     mt: 2
                 }}>
-                    <b>CrateDigger</b> is designed to focus the abilities of the Discogs public API to help curate the user’s personal vinyl record library, and to help make
-                    quick purchasing decisions through organization of a wish list. The front-end is styled with Bootstrap, Chart.js library to visualize
-                    user data, and React-Toastify for alerts. The site has three collections in the database that stores the user’s information,
-                    the main vinyl collection, and the wish list collection. The user is authenticated with JWT-Passport.
+                    <b>CrateDigger</b> is designed to focus the abilities of the Discogs public API to help curate the user’s personal vinyl record library and to help make quick purchasing decisions through organization of a wish list. The front-end is styled with Bootstrap, Chart.js library to visualize user data, and React-Toastify for alerts. The site has three collections in the database that stores the user’s information, the main vinyl collection, and the wish list collection. The user is authenticated with JWT-Passport.
                 </Typography>
                 <br />
 
