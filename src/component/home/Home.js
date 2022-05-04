@@ -78,7 +78,6 @@ function Home() {
                 }}
             >
                 <Particles />
-
             </ParallaxLayer>
 
             <ParallaxLayer
@@ -189,7 +188,6 @@ function Home() {
                             </Box>
                         </ThemeProvider>
                     </Box>
-
                 </Stack>
             </ParallaxLayer>
 
@@ -206,11 +204,12 @@ function Home() {
             >
                 <ParticlesBlue />
             </ParallaxLayer>
+
             <ParallaxLayer
                 offset={1}
                 speed={.3}
                 style={{
-                    zIndex: 1
+                    zIndex: 3
                 }}
             >
                 <Box
@@ -225,7 +224,8 @@ function Home() {
                 speed={.6}
                 offset={1}
                 style={{
-                    zIndex: 1
+                    zIndex: 2,
+                    opacity: "40%"
                 }}
             >
                 <Box
@@ -240,7 +240,8 @@ function Home() {
                 speed={.9}
                 offset={1}
                 style={{
-                    zIndex: 1
+                    zIndex: 1,
+                    opacity: "20%"
                 }}
             >
                 <Box
@@ -254,7 +255,7 @@ function Home() {
 
             <ParallaxLayer
                 offset={1}
-                speed={1.3}
+                speed={1.1}
                 style={{
                     zIndex: 5,
                     display: "flex",
@@ -298,22 +299,20 @@ function Home() {
                     boxShadow: "0px 0px 15px 6px rgba(123, 89, 255, 0.25)",
                 }}
             >
-
                 <Particles />
-
             </ParallaxLayer>
 
             <ParallaxLayer
                 offset={2}
                 speed={.3}
                 style={{
-                    zIndex: 1
+                    zIndex: 3
                 }}
             >
                 <Box
                     sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
                 >
-                    <Typography sx={style.projectMd}>
+                    <Typography sx={style.aboutMd}>
                         About Me
                     </Typography>
                 </Box>
@@ -324,13 +323,14 @@ function Home() {
                 speed={.6}
                 offset={2}
                 style={{
-                    zIndex: 1,
+                    zIndex: 2,
+                    opacity: "40%"
                 }}
             >
                 <Box
                     sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
                 >
-                    <Typography sx={style.projectMd}>
+                    <Typography sx={style.aboutMd}>
                         About Me
                     </Typography>
                 </Box>
@@ -340,13 +340,14 @@ function Home() {
                 speed={.9}
                 offset={2}
                 style={{
-                    zIndex: 1
+                    zIndex: 1,
+                    opacity: "20%"
                 }}
             >
                 <Box
                     sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
                 >
-                    <Typography sx={style.projectMd}>
+                    <Typography sx={style.aboutMd}>
                         About Me
                     </Typography>
                 </Box>
@@ -370,7 +371,7 @@ function Home() {
             <ParallaxLayer
                 offset={2}
                 speed={1}
-                factor={1.2}
+                factor={1.1}
                 style={{
                     zIndex: 5,
                     display: "flex",
@@ -460,6 +461,13 @@ export const style = {
     projectMd: {
         textAlign: "center",
         fontSize: "10vw",
+        color: "white",
+        fontFamily: "Bebas Neue",
+        textShadow: "0px 0px 12px rgba(123, 89, 255, 0.86)"
+    },
+    aboutMd: {
+        textAlign: "center",
+        fontSize: "8vw",
         color: "white",
         fontFamily: "Bebas Neue",
         textShadow: "0px 0px 12px rgba(123, 89, 255, 0.86)"

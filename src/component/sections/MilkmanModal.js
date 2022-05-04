@@ -70,12 +70,17 @@ export function MilkmanModal(props) {
                     <Typography id="modal-modal-description" sx={{
                         mt: 2
                     }}>
-                        <b>Milkman</b> is a MERN stack eCommerce site that emulates a store that sells milk and milk-alternative products. In addition, the site also features an administrative mode where changes to the database can be made from the front end with proper credentials. The shopping cart is created using Redux, and the site is styled with MUI. The database was populated using Kroger’s public API and their postman environment.
+                        <b>Milkman</b> is a MERN stack eCommerce site that emulates a store that sells milk and
+                        milk-alternative products. In addition, the site also features an administrative mode
+                        where changes to the database can be made from the front end with proper credentials.
+                        The shopping cart is created using Redux, and the site is styled with MUI. The database
+                        was populated using Kroger’s public API and their postman environment.
+                        <br />
                     </Typography>
                     <br />
                     <Box>
-                        <Button color="secondary" size="large" variant="contained" href="https://bejewelled-bonbon-6294ce.netlify.app/" style={{ marginRight: "10px" }} target="blank">Milkman</Button>
-                        <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/milkman-frontend" target="blank">GitHub</Button>
+                        <Button color="secondary" size="large" variant="contained" href="https://milkman.zaldana.studio/" style={{ marginRight: "10px" }} target="_blank">Milkman</Button>
+                        <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/milkman-frontend" target="_blank">GitHub</Button>
                     </Box>
                 </Box>
             </Modal>

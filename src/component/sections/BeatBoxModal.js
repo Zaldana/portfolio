@@ -65,8 +65,8 @@ export function BeatBoxModal(props) {
                     </Typography>
                     <br />
                     <Box>
-                        <Button color="secondary" size="large" variant="contained" href="https://zaldana.github.io/beat-box/" target="blank" style={{ marginRight: "10px" }}>BeatBox</Button>
-                        <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/beat-box" target="blank">GitHub</Button>
+                        <Button color="secondary" size="large" variant="contained" href="https://zaldana.github.io/beat-box/" target="_blank" style={{ marginRight: "10px" }}>BeatBox</Button>
+                        <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/beat-box" target="_blank">GitHub</Button>
                     </Box>
                 </Box>
             </Modal>

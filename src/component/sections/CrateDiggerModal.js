@@ -48,7 +48,7 @@ export function CrateDiggerModal(props) {
             <Box sx={style.modal}>
                 <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                     <Typography id="modal-modal-title" variant="h2" component="h2" sx={{ fontFamily: "Bebas Neue" }}>
-                      CrateDigger
+                        CrateDigger
                     </Typography>
                     <IconButton aria-label="delete" size="large" color="secondary" onClick={props.handleCloseTwo}>
                         <DoNotDisturbOnIcon fontSize="large" />
@@ -63,12 +63,12 @@ export function CrateDiggerModal(props) {
                     mt: 2
                 }}>
                     <b>CrateDigger</b> is designed to focus the abilities of the Discogs public API to help curate the user’s personal vinyl record library and to help make quick purchasing decisions through organization of a wish list. The front-end is styled with Bootstrap, Chart.js library to visualize user data, and React-Toastify for alerts. The site has three collections in the database that stores the user’s information, the main vinyl collection, and the wish list collection. The user is authenticated with JWT-Passport.
+                    <br />
                 </Typography>
                 <br />
-
                 <Box>
-                    <Button color="secondary" size="large" variant="contained" href="https://suspicious-bartik-1a8959.netlify.app/" target="blank" style={{ marginRight: "10px" }}>CrateDigger</Button>
-                    <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/crate-digger-frontend-2" target="blank">GitHub</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://cratedigger.zaldana.studio/" target="_blank" style={{ marginRight: "10px" }}>CrateDigger</Button>
+                    <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/crate-digger-frontend-2" target="_blank">GitHub</Button>
                 </Box>
             </Box>
         </Modal>

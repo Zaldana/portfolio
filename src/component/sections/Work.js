@@ -2,7 +2,6 @@
 export const style = {
     bar: {
         display: "flex",
-        background: "rgb(5, 15, 55)",
         background: "linear-gradient(10deg, rgba(0, 0, 0, 1) 10%, rgba(5, 15, 55, 1) 73%)",
         flexDirection: "column",
         boxShadow: "0px 0px 15px 6px rgba(123, 89, 255, 0.25)",

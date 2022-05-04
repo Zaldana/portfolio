@@ -1,14 +1,12 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { Particles } from '../home/Particles';
 import Me from '../../images/me.jpg'
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { IconTab } from './IconTab';
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 function AboutMe() {
 
@@ -22,8 +20,8 @@ function AboutMe() {
         
         <Box>
             <Box
-                mr={{ xs: 0, sm: 0, md: 15}}
-                ml={{ xs: 0, sm: 0, md: 15 }}
+                mr={{ xs: 0, sm: 0, md: 15, lg: 35 }}
+                ml={{ xs: 0, sm: 0, md: 15, lg: 35 }}
                 pl={{ xs: 0, sm: 0, md: 5 }}
                 pr={{ xs: 0, sm: 0, md: 5 }}
                 pt={{ xs: .2, sm: .2, md: 2 }}
