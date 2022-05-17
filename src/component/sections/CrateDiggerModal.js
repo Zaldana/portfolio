@@ -6,6 +6,7 @@ import Node from '../../images/node.png';
 import Bootstrap from "../../images/bootstrap.png";
 import CrateDigger from "../../images/cratedigger.png";
 import CrateDiggerHome from "../../images/cratediggerhome.png";
+import AWS from '../../images/aws.png';
 import {
     Typography,
     Box, Modal,
@@ -42,6 +43,11 @@ export function CrateDiggerModal(props) {
             <img src={Bootstrap} alt="bootstrap logo" style={{
                 height: "30px",
                 width: "30px"
+            }} />
+            <img src={AWS} alt="aws logo" style={{
+                height: "20px",
+                width: "30px",
+                padding: 3
             }} />
         </Box>
         <Modal open={props.openTwo} onClose={props.handleCloseTwo} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">

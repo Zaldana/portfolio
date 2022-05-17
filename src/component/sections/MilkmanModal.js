@@ -7,6 +7,7 @@ import Express from '../../images/express.png';
 import Node from '../../images/node.png';
 import Milkman from "../../images/milkman.png";
 import Control from "../../images/control.png"
+import AWS from '../../images/aws.png';
 import {
     Typography,
     Box, Modal,
@@ -51,6 +52,12 @@ export function MilkmanModal(props) {
                     height: "35px",
                     width: "35px"
                 }} />
+                <img src={AWS} alt="aws logo" style={{
+                    height: "20px",
+                    width: "30px",
+                    padding: 3
+                }} />
+                
             </Box>
             <Modal open={props.openOne} onClose={props.handleCloseOne} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
                 <Box sx={style.modal}>

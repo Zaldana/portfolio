@@ -4,6 +4,7 @@ import HTML from "../../images/html.png";
 import CSS from "../../images/css.png";
 import BeatBox from "../../images/beatboxSS.png";
 import Seq from "../../images/seq.png"
+import AWS from '../../images/aws.png';
 import {
     Typography,
     Box, Modal,
@@ -32,6 +33,11 @@ export function BeatBoxModal(props) {
                 }} />
                 <img src={JQuery} alt="jquery logo" style={{
                     height: "30px",
+                    width: "30px",
+                    padding: 3
+                }} />
+                <img src={AWS} alt="aws logo" style={{
+                    height: "20px",
                     width: "30px",
                     padding: 3
                 }} />
@@ -65,7 +71,7 @@ export function BeatBoxModal(props) {
                     </Typography>
                     <br />
                     <Box>
-                        <Button color="secondary" size="large" variant="contained" href="https://zaldana.github.io/beat-box/" target="_blank" style={{ marginRight: "10px" }}>BeatBox</Button>
+                        <Button color="secondary" size="large" variant="contained" href="https://beatbox.zaldana.studio/" target="_blank" style={{ marginRight: "10px" }}>BeatBox</Button>
                         <Button color="secondary" size="large" variant="contained" href="https://github.com/Zaldana/beat-box" target="_blank">GitHub</Button>
                     </Box>
                 </Box>

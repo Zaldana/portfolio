@@ -56,7 +56,7 @@ function Home() {
 
     const handleCloseNavMenu = (section) => {
         if (section === "resume") {
-            window.location.href = "https://1drv.ms/b/s!AgjilcumjYndhqI8DROm23VT_U2kwg"
+            window.open("https://1drv.ms/b/s!AgjilcumjYndhqI8DROm23VT_U2kwg/", "_blank")
         } else {
             ref.current.scrollTo(section)
             setAnchorElNav(null);
